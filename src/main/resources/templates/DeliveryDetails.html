@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Delivery.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Order Delivery Details</h1>
+    <form id="consultation-form" class="feed-form" action="#" data-th-action="@{/address}"
+        data-th-object="${AddressModel}" method="post">
+        <br>
+        <label for="fname">Name:</label>
+        <input type="text" id="fname" data-th-field="*{name}" placeholder="Name" />
+        <span class="error" data-th-if="${#fields.hasErrors('name')}" data-th-errors="*{name}"></span>
+        <br>
+        <label for="faddress">Address:</label>
+        <input type="text" id="faddress" data-th-field="*{address}" required placeholder="address" />
+        <span class="error" data-th-if="${#fields.hasErrors('address')}" data-th-errors="*{address}"></span>
+        <br>
+        <label for="fPhoneNumber">Phone Number:</label>
+        <input type="text" id="fPhoneNumber" data-th-field="*{PhoneNumber}" placeholder="phone number" />
+        <span class="error" data-th-if="${#fields.hasErrors('PhoneNumber')}" data-th-errors="*{PhoneNumber}"></span>
+        <br>
+        <label for="fRush">Rush:</label>
+        <input type="checkbox" class="rush" placeholder="Rush" data-th-field="*{rush}">
+        <br>
+        <label for="fComments">Comments:</label>
+        <input type="text" placeholder="Type here" data-th-field="*{comments}">
+        <br>
+        <button class="button_Order">Place Order</button>
+        <a class="button_Cancel" href="/">Cancel Order</a>
+    </form>
+    <!-- <form id="consultation-form" class="feed-form" action="/cancel-order" data-th-action="@{/address}" data-th-object="${AddressModel}" method="post">
+        <button class="button_submit">Cancel Order</button>
+    </form> -->
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+body {
+    background-image: url("pizza-background.jpg");
+    background-size: cover;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-top: 50px;
+  }
+  
+  label {
+    font-size: 18px;
+  }
+  
+  .selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .selection img {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .selection img:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .PizzaType label {
+    margin-left: -5px;
+  }
+  
+  #size {
+    margin-left: 27px;
+  }
+  
+  .button_submit {
+    margin-left: 60px;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button_submit:hover {
+    background-color: #ff8c00;
+  }
+
+  
+  input[type="radio"]:hover {
+    cursor: pointer;
+  }
+  
+  input[type="radio"]:checked + label {
+    font-weight: bold;
+  }
+
+  .pick label {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .pick {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .error{
+    color: red;
+    margin-left: 75px;
+  }

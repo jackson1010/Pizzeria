@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Orders.css" />
+    <title>Delivery Details</title>
+</head>
+
+<body>
+    <h1>Delivery Details</h1>
+    <section class="section_form">
+        <div data-th-object="${AddressModel}">
+            <div class="row">
+                <div class="col">
+                    <label for="OrderNo">Order Number:</label>
+                    <a href="'/order/' + *{id}">
+                        <p id="fid" data-th-text="*{id}"></p>
+                    </a>
+                </div>
+                <div class="col">
+                    <label for="faddress">Your order will be delivered to :</label>
+                    <p id="faddress" data-th-text="*{address}"></p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col">
+                    <label for="fcomments">Comments:</label>
+                    <p id="fcomments" data-th-text="*{comments}"></p>
+                </div>
+                <div class="col" th:if="*{rush == true}">
+                    <label for="frushCost">Rush Cost:</label>
+                    <p>$2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="fpizzacost">Pizza Cost:</label>
+                <br>
+                <p class="dollar">$</p>
+                <p id="fpizzacost" data-th-text= "${pizzaCost}"></p>
+            </div>
+            <div class="col">
+                <label for="ftotalcost">Total Cost:</label>
+                <br>
+                <p class="dollar">$</p>
+                <p id="ftotalcost" data-th-text="${totalCost}"></p>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+
+</html>
